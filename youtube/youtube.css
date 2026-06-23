@@ -1,0 +1,75 @@
+<style>
+/* 1. Target every element on the page */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins and padding that browsers automatically add */
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Make sure images don't accidentally overflow their containers */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 30px;
+
+}
+
+
+
+.card {
+    max-width: 300px;
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.detail {
+    display: flex;
+    align-items: center;
+    justify-content: space-start;
+    gap: 10px;
+    margin-top: 10px;
+}
+.detail img {
+    border-radius: 50%;
+}
+.thumbnail-img {
+    border-radius: 15px;
+}
+
+@media (max-width: 1000px) {
+    .main-container {
+        grid-template-columns: 1fr 1fr;
+        padding: 15px;
+    }
+}
+
+h1 {
+    font-size: 20px;
+}
+h2 {
+    font-size: 12px;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Practice Website</title>
+        <link rel="stylesheet" href="practice.css">
+    </head>
+    <body>
+        <div class="chat-container">
+            <div class="input-wrapper">
+                <input type="text" placeholder="Ask Gemini..." class="chat-input" />
+                <button class="send-btn">
+                ➔
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
+
+
+
+<script>
+    // Step 1: Grab our HTML boxes and store them in JavaScript variables
+    const inputBar = document.querySelector('.chat-input');
+    const sendButton = document.querySelector('.send-btn');
+
+    // Step 2: Listen for a click event on the button
+    sendButton.addEventListener('click', function() {
+        
+        // Step 3: Get the exact text the user typed
+        const userText = inputBar.value;
+        
+        // Step 4: Check if the user actually typed something
+        if (userText.trim() !== "") {
+        console.log("User typed:", userText);
+        
+        // Step 5: Clear out the input bar so they can type a new message
+        inputBar.value = "";
+        } else {
+        console.log("The input is empty!");
+        }
+        
+    });
+</script>

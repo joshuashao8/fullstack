@@ -1,0 +1,76 @@
+/* Center the container on the screen so we can look at it nicely */
+.chat-container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+  background-color: #f8f9fa; /* Off-white background makes white items pop */
+}
+
+/* The Pill-Shaped Container wrapping both the input and the button */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px; /* Limits how wide the bar expands */
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 32px; /* Gives it that perfect pill shape */
+  padding: 8px 16px;
+  
+  /* Soft, layered premium shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(20, 20, 0, 0.06);
+  transition: all 1s ease;
+}
+
+/* The actual text input field */
+.chat-input {
+  flex: 1; /* Forces the input field to take up all remaining horizontal space */
+  border: none;
+  outline: none; /* Removes the ugly default browser blue border */
+  padding: 12px 8px;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f1f1f;
+}
+
+/* Changing how the placeholder text looks */
+.chat-input::placeholder {
+  color: #757575;
+  transition: all 5s ease;
+}
+
+/* The interactive Circle Send Button */
+.send-btn {
+  background-color: #1f1f1f; /* Dark sleek button */
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%; /* Makes it a perfect circle */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+/* --- INTERACTIVE STATES --- */
+
+/* When a user clicks inside the input bar, light up the whole wrapper */
+.input-wrapper:focus-within {
+  border-color: #4285f4; /* Google Blue */
+    
+  box-shadow: 0 4px 20px rgba(66, 133, 244, 0.25); /* Soft blue glow */
+  background-color: #fff;
+}
+
+/* Hover effect for our button */
+.send-btn:hover {
+  background-color: #4285f4; /* Turns blue on hover */
+}
+
+/* Button click effect */
+.send-btn:active {
+  transform: scale(0.85); /* Shrinks slightly when clicked */
+}

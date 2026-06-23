@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  align-items: center;
+  height: 100vh;
+  background: hsl(210deg 15% 6%);
+  color: white;
+}
+body::before {
+  content: 'Hover/tap/focus this element:';
+  display: block;
+  text-align: center;
+}
+button {
+  display: block;
+  background: none;
+
+}
+svg {
+  display: block;
+}

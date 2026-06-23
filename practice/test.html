@@ -1,0 +1,114 @@
+<style>
+/* 1. Target every element on the page */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins and padding that browsers automatically add */
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Make sure images don't accidentally overflow their containers */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+
+
+
+
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  
+}
+.nav-links li {
+  transition: 0.4s;
+  cursor: pointer;
+}
+.nav-links li:hover {
+  color: lightsteelblue;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.card-grid {
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 3 columns of equal length */
+
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background-color: #f4f4f4;
+  border: 2px solid #ddd;
+  padding: 40px 20px;
+  text-align: center;
+  color: #333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+  border-radius: 12px;
+  transition: 0.4s;
+}
+.card:hover {
+  font-weight: bold;
+  font-size: 1.04em;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition:0.3s;
+}
+
+/* If the viewport width is 800px or smaller... */
+@media (max-width: 500px) {
+  
+  .card-grid {
+    /* Change from 3 columns down to 1 single column */
+    grid-template-columns: 1fr; 
+    padding: 15px; /* Shrink the padding slightly for smaller screens */
+  }
+
+  .navbar {
+    /* Remember your navbar? Let's stack the logo and links vertically on mobile */
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+</style>
+<body>
+  <nav class="navbar">
+    <div class="logo">MyWebsite</div>
+    <ul class="nav-links">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+    </ul>
+  </nav>
+
+
+  <main class="card-grid">
+    <div class="card">Note 1</div>
+    <div class="card">Note 2</div>
+    <div class="card">Note 3</div>
+    <div class="card">Note 4</div>
+    <div class="card">Note 5</div>
+    <div class="card">Note 6</div>
+  </main>
+</body>

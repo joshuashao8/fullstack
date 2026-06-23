@@ -1,0 +1,86 @@
+<style>
+  /* 1. Target every element on the page */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margins and padding that browsers automatically add */
+body, h1, h2, h3, p, ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Make sure images don't accidentally overflow their containers */
+img {
+  max-width: 100%;
+  display: block;
+}
+  circle {
+    fill: hotpink;
+    transition: r 400ms, cy 600ms;
+  }
+  rect{
+    transition: 400ms;
+  }
+  button:hover circle,button:focus-visible circle {
+    r: 10px;
+    cy: 100px;
+  }
+  button:hover rect{
+    x:20px;
+    y:20px;
+  }
+    .hello {
+    stroke: oklch(0.9 0.2 179);
+    stroke-width: 4px;
+    stroke-dasharray: 0, 10, 25, 10;
+    stroke-linecap: square;
+    
+    }
+    @keyframes lights {
+        from {
+            stroke-dashoffset:0;
+        }
+        to {
+            stroke-dashoffset: 26;
+        }
+    }
+    polygon {
+  stroke-dasharray: 0, 26;
+  animation: lights 400ms linear infinite;
+}
+
+
+</style>
+
+<button>
+  <svg width="500" height="500">
+    <circle
+        r="30"
+        cx="50"
+        cy="50"
+    />
+    <rect
+        x="4"
+        y="3"
+        width="50"
+        height="50"
+        rx="10"
+        ry="10"
+        stroke="lightblue"
+        stroke-width="5"
+        fill="none"
+    />
+    <polygon
+    points="
+        60,100
+        100,180
+        140,140
+        180,180
+        220,100
+    "
+    />
+
+  </svg>
+  
+</button>
