@@ -1,0 +1,93 @@
+/* Clean Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Centers the whole chat window vertically on your monitor */
+}
+
+.chat-screen {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px; /* Limits the width so it looks like a premium phone/web app */
+    background-color: #202020;
+    height: 90vh;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.message-feed {
+    background-color: #3d3d3d; 
+    flex: 1; /* Automatically forces the feed to fill all available space, pushing input down */
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    overflow-y: auto; /* Adds a clean scrollbar if messages overflow */
+    
+    /* Crucial: Turns feed into a column layout so we can align bubbles left/right */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; 
+}
+
+.input-box {
+    display: flex; /* Lines up the text field and button horizontally on 1 row */
+    align-items: center;
+    background-color: #3d3d3d;
+    border-radius: 40px;
+    padding: 8px 16px;
+    gap: 12px;
+}
+
+.chat-input {
+    flex: 1; /* Tells the text bar to consume all empty row space */
+    background-color: rgb(52, 52, 52);
+    border: none;
+    font-size: 16px; /* Realistic typing size */
+    color: lightgrey;
+    padding: 12px;
+    outline: none;
+    border-radius: 40px;
+}
+
+.send-btn {
+    font-size: 24px; /* Realistic icon size */
+    color: lightgrey;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Message Bubbles Styling --- */
+.message-card {
+    padding: 12px 18px;
+    max-width: 75%; /* Prevents text bubbles from stretching completely across the screen */
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#receive {
+    background-color: whitesmoke;
+    color: #121212;
+    border-radius: 20px 20px 20px 0px; /* Cuts bottom-left corner */
+    align-self: flex-start; /* Correct Flexbox value to snap bubble to the left */
+}
+
+#send {
+    background-color: #0b93f6; /* Modern, clean blue theme for sent items */
+    color: white;
+    border-radius: 20px 20px 0px 20px; /* Cuts bottom-right corner */
+    align-self: flex-end; /* Correct Flexbox value to snap bubble to the right */
+}
